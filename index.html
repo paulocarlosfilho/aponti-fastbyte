@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>FastByte Delivery — Transformação Cultural</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root { --color-bg: #09090b; --color-text: #FAFAFA; }
+    body { background: var(--color-bg); color: var(--color-text); font-family: 'Inter', sans-serif; overflow: hidden; height: 100vh; }
+    .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease; display: flex; align-items: center; justify-content: center; pointer-events: none; }
+    .slide.active { opacity: 1; pointer-events: all; }
+    .card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.1); border-radius: 1rem; padding: 1.5rem; }
+  </style>
+</head>
+<body>
+
+<div class="deck">
+  <!-- Slide 1 -->
+  <div class="slide active">
+    <div class="text-center p-10">
+      <h1 class="text-6xl font-black mb-6 text-blue-500">FastByte Delivery</h1>
+      <p class="text-2xl text-zinc-400">Transformando o Colapso em Colaboração</p>
+      <p class="mt-4 text-lg">Esquadrão 1: Pilar de Cultura</p>
+    </div>
+  </div>
+
+  <!-- Slide 2: Problema -->
+  <div class="slide">
+    <div class="max-w-4xl p-10">
+      <h2 class="text-4xl font-bold mb-8 text-orange-500">O Anti-Padrão: "O Muro da Confusão"</h2>
+      <div class="card">
+        <p class="text-xl leading-relaxed">Na FastByte atual, o código é jogado por cima do muro na sexta-feira à noite. O time de Dev diz "na minha máquina funciona" e o time de Ops enfrenta o caos. O resultado é o esgotamento das equipes e o risco direto à receita da empresa.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slide 3: Estudos de Caso -->
+  <div class="slide">
+    <div class="max-w-4xl p-10">
+      <h2 class="text-4xl font-bold mb-8 text-blue-400">Lições dos Gigantes</h2>
+      <div class="grid grid-cols-1 gap-6">
+        <div class="card">
+          <h3 class="text-xl font-bold mb-2 text-blue-300">Netflix: Responsabilidade Compartilhada</h3>
+          <p class="text-zinc-400">Princípio "You build it, you run it": o desenvolvedor é dono do código em produção. Se falhar, ele atua junto com o Ops, garantindo resiliência desde o início.</p>
+        </div>
+        <div class="card">
+          <h3 class="text-xl font-bold mb-2 text-blue-300">Amazon: Mentalidade "Blameless"</h3>
+          <p class="text-zinc-400">Pós-incidente focado em falhas no processo, nunca em pessoas. Exemplo: automatizar verificações para que um erro humano nunca seja repetido.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Slide 4: Docker -->
+  <div class="slide">
+  <div class="max-w-4xl p-10">
+    <h2 class="text-4xl font-bold mb-8 text-purple-400">Docker: A Cultura em Código</h2>
+    <div class="card">
+      <h3 class="text-xl font-bold mb-3">Eliminando o "Na minha máquina funciona"</h3>
+      <p class="text-xl leading-relaxed">
+        O Docker não é apenas uma ferramenta; é um pilar cultural. Ao empacotar o código com suas dependências, o desenvolvedor entrega o ambiente completo para o Ops. Isso elimina o atrito entre times, pois o que roda na máquina do Dev é exatamente o que será executado no servidor de produção, acabando com a cultura de culpa e recriminação.
+      </p>
+    </div>
+  </div>
+</div>
+
+  <!-- Slide 5: Resultados -->
+  <div class="slide">
+    <div class="max-w-4xl p-10">
+      <h2 class="text-4xl font-bold mb-8 text-emerald-400">O que a FastByte terá</h2>
+      <ul class="space-y-4 text-xl">
+        <li>✅ <strong>Sustentabilidade:</strong> Fim dos fins de semana perdidos e estresse crônico.</li>
+        <li>✅ <strong>Estabilidade:</strong> Ambiente previsível e seguro.</li>
+        <li>✅ <strong>Confiança:</strong> Erro como ativo de aprendizado, não punição.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- Slide de Conclusão -->
+<div class="slide">
+  <div class="text-center p-10 max-w-3xl">
+    <h2 class="text-5xl font-black mb-8 text-white">Próximos Passos</h2>
+    <div class="card mb-8">
+      <p class="text-2xl leading-relaxed italic">
+        "Ferramentas como Docker nos dão a eficiência, mas a cultura Blameless nos dá a resiliência. A FastByte não precisa apenas de novos servidores, precisa de uma nova forma de trabalhar."
+      </p>
+    </div>
+    <p class="text-xl text-zinc-400">Obrigado!! Estamos prontos para transformar o colapso em excelência.</p>
+  </div>
+</div>
+
+<div class="fixed bottom-10 left-0 right-0 flex justify-center gap-4">
+  <button class="px-6 py-2 bg-zinc-800 rounded hover:bg-zinc-700" onclick="prev()">Anterior</button>
+  <button class="px-6 py-2 bg-blue-600 rounded hover:bg-blue-700" onclick="next()">Próximo</button>
+</div>
+
+<script>
+  let idx = 0;
+  const slides = document.querySelectorAll('.slide');
+  function update() { slides.forEach((s, i) => s.classList.toggle('active', i === idx)); }
+  function next() { if(idx < slides.length - 1) idx++; update(); }
+  function prev() { if(idx > 0) idx--; update(); }
+</script>
+</body>
+</html>
