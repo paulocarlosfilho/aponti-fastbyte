@@ -2,6 +2,8 @@
 
 Este documento detalha a estratégia de transformação cultural proposta para a FastByte Delivery, focada em resolver o colapso operacional através da mudança de comportamento e colaboração entre equipes.
 
+<img src="src/assets/wallpaper.png" width="1000" alt="Wallper do projeto">
+
 ## 🎯 Objetivo
 Quebrar a barreira entre as equipes de Desenvolvimento (Dev) e Operações (Ops), transformando um ambiente de isolamento e acusações em uma cultura de responsabilidade compartilhada e evolução contínua.
 
